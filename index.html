@@ -85,6 +85,7 @@
             <a href="https://linkedin.com" target="_blank" title="링크드인 바로가기" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://instagram.com" target="_blank" title="인스타그램 바로가기" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://blog.naver.com" target="_blank" title="블로그 바로가기" aria-label="Blog"><i class="fa-solid fa-blog"></i></a>
+            <a href="#" id="qrBtn" title="QR 코드 보기" aria-label="QR Code"><i class="fa-solid fa-qrcode"></i></a>
           </div>
         </div>
 
@@ -175,6 +176,18 @@
     </div> <!-- card-container 끝 -->
     
   </div> <!-- app-container 끝 -->
+
+  <!-- QR 코드 모달 -->
+  <div class="qr-modal" id="qrModal">
+    <div class="qr-modal-content">
+      <button class="qr-close-btn" id="qrCloseBtn" aria-label="모달 닫기">&times;</button>
+      <h3>온라인 명함 QR 코드</h3>
+      <div class="qr-code-wrapper">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fvercel.com%2Flje%2Fmy-web-card" alt="QR Code">
+      </div>
+      <p>스마트폰 카메라로 QR 코드를 스캔하면<br>명함 페이지로 연결됩니다.</p>
+    </div>
+  </div>
 
   <!-- 스크립트 연결 -->
   <script src="app.js"></script>

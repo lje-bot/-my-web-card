@@ -26,4 +26,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ==========================================
+  // QR 코드 모달 제어 기능
+  // ==========================================
+  const qrBtn = document.getElementById('qrBtn');
+  const qrModal = document.getElementById('qrModal');
+  const qrCloseBtn = document.getElementById('qrCloseBtn');
+
+  // QR 코드 버튼 클릭 시 모달 열기
+  if (qrBtn && qrModal) {
+    qrBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // href="#"로 인한 상단 스크롤 방지
+      qrModal.classList.add('is-active');
+    });
+  }
+
+  // 닫기 버튼 클릭 시 모달 닫기
+  if (qrCloseBtn && qrModal) {
+    qrCloseBtn.addEventListener('click', () => {
+      qrModal.classList.remove('is-active');
+    });
+  }
+
+  // 모달 배경 바깥 영역 클릭 시 모달 닫기
+  if (qrModal) {
+    qrModal.addEventListener('click', (e) => {
+      if (e.target === qrModal) {
+        qrModal.classList.remove('is-active');
+      }
+    });
+  }
+
 });
